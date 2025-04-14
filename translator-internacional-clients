@@ -1,0 +1,49 @@
+# 🌍 Tradutor Automático para Atendimento Global
+
+## 📁 Projeto: translator-internacional-clients
+
+### Descrição:
+Ferramenta básica de tradução multilíngue automática para suporte internacional.
+
+---
+
+### Funcionalidades:
+- 🌐 Detecta idioma automaticamente.
+- 🔄 Tradução com suporte ao Google Translate.
+
+---
+
+### Tecnologias:
+- **Python**
+- **deep-translator**
+
+---
+
+### Como usar:
+1. Instale as dependências:
+    ```bash
+    pip install deep-translator
+    ```
+2. Rode o script:
+    ```bash
+    python translate.py
+    ```
+
+---
+
+### Código:
+```python
+from deep_translator import GoogleTranslator
+
+mensagem = "Hola, ¿cómo podemos ayudarte con la producción?"
+traduzida = GoogleTranslator(source='auto', target='en').translate(mensagem)
+
+print(f"Original: {mensagem}")
+print(f"Traduzido: {traduzida}")
+```
+
+---
+
+### Melhorias futuras:
+- 🖥️ Interface gráfica simples.
+- 📞 Integração com Zendesk ou CRM.
