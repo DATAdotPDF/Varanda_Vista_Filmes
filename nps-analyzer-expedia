@@ -1,0 +1,60 @@
+# 📊 Analisador de NPS — Expedia Group
+
+## 📁 Projeto: nps-analyzer-expedia
+
+### Descrição:
+Calculadora e visualizador de Net Promoter Score para análise de satisfação do cliente.
+
+---
+
+### Funcionalidades:
+- 🧮 Cálculo do NPS.
+- 📊 Classificação de promoters e detratores.
+- 📈 Histograma com distribuição.
+
+---
+
+### Tecnologias:
+- **Python**
+- **matplotlib**
+
+---
+
+### Como usar:
+1. Instale as dependências:
+    ```bash
+    pip install matplotlib
+    ```
+2. Rode o script:
+    ```bash
+    python nps.py
+    ```
+
+---
+
+### Código:
+```python
+import matplotlib.pyplot as plt
+
+nps_scores = [9, 8, 10, 6, 7, 5, 9, 10, 8, 3]
+promoters = len([n for n in nps_scores if n >= 9])
+detractors = len([n for n in nps_scores if n <= 6])
+total = len(nps_scores)
+
+nps = ((promoters - detractors) / total) * 100
+print(f"NPS: {nps:.2f}")
+
+# Visualização
+plt.hist(nps_scores, bins=10, edgecolor='black')
+plt.title("Distribuição de NPS dos Clientes")
+plt.xlabel("Nota")
+plt.ylabel("Frequência")
+plt.grid(True)
+plt.show()
+```
+
+---
+
+### Melhorias futuras:
+- 📂 Entrada via CSV.
+- 📄 Exportação de relatórios.
