@@ -1,0 +1,55 @@
+# 📊 Controle Financeiro e Forecast de Produção
+
+## 📁 Projeto: financial-dashboard-producao
+
+### Descrição:
+Ferramenta para monitorar orçamento de produção e prever risco de estouro financeiro.
+
+---
+
+### Funcionalidades:
+- 💰 Soma de custos.
+- 📉 Cálculo de saldo.
+- 🚨 Alertas automáticos.
+
+---
+
+### Tecnologias:
+- **Python**
+
+---
+
+### Como usar:
+1. Edite o dicionário `gastos` com os valores reais.
+2. Rode o script:
+    ```bash
+    python financeiro.py
+    ```
+
+---
+
+### Código:
+```python
+budget = 250_000
+gastos = {
+    "Pré-produção": 40_000,
+    "Equipe Técnica": 100_000,
+    "Logística": 35_000,
+    "Pós-produção": 60_000
+}
+
+total_gasto = sum(gastos.values())
+restante = budget - total_gasto
+
+print(f"Gasto total: R${total_gasto:,.2f}")
+print(f"Orçamento restante: R${restante:,.2f}")
+
+if restante < 20_000:
+    print("⚠️ Alerta: orçamento se aproximando do limite.")
+```
+
+---
+
+### Melhorias futuras:
+- 📂 Conexão com planilhas do Google Sheets.
+- 📈 Projeções com **statsmodels** ou **Prophet**.
