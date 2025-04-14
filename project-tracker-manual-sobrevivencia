@@ -1,0 +1,36 @@
+# 🎬 Gestão de Cronograma — Manual de Sobrevivência para o Século XXI
+
+## 📁 Projeto: project-tracker-manual-sobrevivencia
+
+### Descrição:
+Script para acompanhamento de etapas e prazos de produção audiovisual. Permite visualizar em tempo real o status de cada fase e identificar atrasos.
+
+---
+
+### Funcionalidades:
+- 🕒 Cálculo de dias restantes para cada etapa.
+- 🚨 Detecção de prazos vencidos.
+- 🎯 Apresentação amigável do status de produção.
+
+---
+
+### Tecnologias:
+- **Python**
+- **datetime**
+
+---
+
+### Como usar:
+1. Altere os valores do dicionário `cronograma` com suas datas reais.
+2. Rode o script.
+3. Verifique o status de cada etapa no terminal.
+
+```bash
+python nome_do_script.py
+```
+
+---
+
+### Melhorias futuras:
+- 📊 Exportar como dashboard com **Streamlit**.
+- ✉️ Enviar alertas por **e-mail** ou **WhatsApp**.
